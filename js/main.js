@@ -2,7 +2,6 @@ const fetchUsers = async () => await (await fetch('/.netlify/functions/getusers'
 
 fetchUsers().then(data => {
     const userList = document.querySelector("#users")
-
     data.forEach(user => {
         const li = document.createElement('li')
         li.className = 'list-group-item'
